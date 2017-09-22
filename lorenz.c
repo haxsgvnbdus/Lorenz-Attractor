@@ -1,7 +1,21 @@
+/*  Han Ngo
+ *
+ *
+ *  Key bindings:
+ *  ESC    		 Exit
+ *  LEFT/RIGHT   change view angle (x -/+)
+ *  UP/DOWN      change view angle (y -/+)
+ *  s/a 		 change view angle (z -/+)
+ *  r 			 restart animation
+ *  f            finish animation
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 //  OpenGL with prototypes for glext
+#define GL_GLEXT_PROTOTYPES
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
@@ -152,7 +166,7 @@ static void key(unsigned char k, int x, int y) {
 }
 
 static void idle(void) {
-	iter+= 200;
+	iter+= 200;			//set animation speed to be 200 (pretty fast!)
 	glutPostRedisplay();
 }
 
